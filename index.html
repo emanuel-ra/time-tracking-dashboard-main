@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="./css/app.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <main class="w-screen h-screen flex flex-col justify-center items-center">
+
+    <div class="md:w-11/12 lg:w-1/2 lg:grid grid-cols-1 md:grid-cols-4 gap-6" role="grid">
+
+      <div class="card bg-dark-blue row-span-2 shadow-lg">
+
+        <div class="card-header flex flex-col bg-blue rounded-lg">
+            <img src="./images/image-jeremy.png" class="w-20 border-2 border-white rounded-full" role="img" alt="Jeremy Robson">
+            <p class="text-pale-blue mt-14">Report for</p>
+            <h1 class="text-white mb-10">Jeremy Robson</h1>
+        </div>
+
+        <div class="card-body">
+          <p class="text-pale-blue mt-4">
+            <a href="#" class="time_link active">Daily</a>
+          </p>
+          <p class="text-pale-blue mt-4">
+            <a href="#" class="time_link">Weekly</a>
+          </p>
+          <p class="text-pale-blue mt-4">
+            <a href="#" class="time_link">Monthly</a>
+          </p>        
+        </div>
+      </div>
+
+      <div class="card card-activities">
+
+        <div class="flex justify-end bg-light-red-work rounded-t-lg">
+          <img src="./images/icon-work.svg" alt="icon-work" class="w-11" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+          
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="Work">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card card-activities">
+        <div class="flex justify-end bg-soft-blue-play rounded-t-lg">
+          <img src="./images/icon-play.svg" alt="icon-play" class="w-11" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="Play">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card card-activities">
+        <div class="flex justify-end bg-light-red-study rounded-t-lg">
+          <img src="./images/icon-study.svg" alt="icon-study" class="w-11" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+          
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="Study">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+        
+      </div>
+
+      <div class="card card-activities">
+
+        <div class="flex justify-end bg-lime-green-exercise rounded-t-lg">
+          <img src="./images/icon-exercise.svg" alt="icon-exercise" class="w-14" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="Exercise">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card card-activities">
+        <div class="flex justify-end bg-violet-social rounded-t-lg">
+          <img src="./images/icon-social.svg" alt="icon-social" class="w-11" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="Social">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card card-activities">
+        <div class="flex justify-end bg-soft-orange-self-care rounded-t-lg">
+          <img src="./images/icon-self-care.svg" alt="icon-self-care" class="w-11" srcset="">
+        </div>
+
+        <div class="bg-dark-blue p-3 rounded-lg">
+
+          <div class="flex justify-between items-center text-white">
+            <span class="title"> Care</span>
+            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+          </div>
+
+          <div id="SelfCare">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="text-white absolute bottom-0">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Tomas Emanuel Ramirez Abarca</a>.
+    </div>
+
+  </main>
+  
+  <script src="js/app.js" type="module"></script>
+</body>
+</html>
