@@ -1,6 +1,8 @@
 import data from '../data.json' assert { type: 'json' };;
 
 let card_activities = document.querySelectorAll('.card-activities');
+let time_link = document.querySelectorAll('.time_link');
+
 let timeframes = 'daily';
 
 const f = {
@@ -47,4 +49,29 @@ card_activities.forEach((element,index) => {
     f.setTime({timeframes,current_time,index})
     f.setPrevious({timeframes,previous_time,index})
      
+});
+
+
+time_link.forEach( (element) => {
+    element.addEventListener('click',function(){       
+        time_link.forEach( (link) => {
+            link.classList.remove('active')
+        } );
+        element.classList.add('active');
+
+        timeframes = element.dataset.type;
+        
+        card_activities.forEach((element,index) => {
+            let title = element.querySelector('.title')
+            let current_time = element.querySelector('.current_time');
+            let previous_time = element.querySelector('.previous_time');
+            //console.log(index,current_time);        
+            //title.innerText = data[index].title           
+            f.setTitle({title,index})
+            f.setTime({timeframes,current_time,index})
+            f.setPrevious({timeframes,previous_time,index})
+             
+        });
+        
+    });
 });

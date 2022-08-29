@@ -17,65 +17,42 @@
 </head>
 <body>
 
-  <main class="w-screen h-screen flex flex-col justify-center items-center">
+  <main class="lg:w-screen lg:h-screen flex flex-col justify-center items-center">
 
-    <div class="md:w-11/12 lg:w-1/2 lg:grid grid-cols-1 md:grid-cols-4 gap-6" role="grid">
+    <div class="md:w-11/12 max-w-[60%] grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-6 mt-10 lg:mt-0" role="grid">
 
-      <div class="card bg-dark-blue row-span-2 shadow-lg">
+      <div class="card bg-dark-blue md:row-span-2 shadow-lg">
 
-        <div class="card-header flex flex-col bg-blue rounded-lg">
-            <img src="./images/image-jeremy.png" class="w-20 border-2 border-white rounded-full" role="img" alt="Jeremy Robson">
-            <p class="text-pale-blue mt-14">Report for</p>
-            <h1 class="text-white mb-10">Jeremy Robson</h1>
+        <div class="card-header flex lg:flex-col bg-blue rounded-lg">
+            <img src="./images/image-jeremy.png" class="w-14 h-14 lg:w-20 lg:h-20 border-2 border-white rounded-full" role="img" alt="Jeremy Robson">
+            <div class="p-2">
+              <p class="text-pale-blue lg:mt-14">Report for</p>
+              <h1 class="text-white lg:mb-10">Jeremy Robson</h1>
+            </div>
         </div>
 
-        <div class="card-body">
-          <p class="text-pale-blue mt-4">
-            <a href="#" class="time_link active">Daily</a>
-          </p>
-          <p class="text-pale-blue mt-4">
-            <a href="#" class="time_link">Weekly</a>
-          </p>
-          <p class="text-pale-blue mt-4">
-            <a href="#" class="time_link">Monthly</a>
-          </p>        
+        <div class="card-body flex justify-between lg:flex-col">
+          <a href="#" data-type="daily" class="time_link active text-pale-blue lg:mt-4">Daily</a>
+          <a href="#" data-type="weekly" class="time_link  text-pale-blue lg:mt-4">Weekly</a>
+          <a href="#" data-type="monthly" class="time_link  text-pale-blue lg:mt-4">Monthly</a>
         </div>
+
       </div>
 
       <div class="card card-activities">
 
-        <div class="flex justify-end bg-light-red-work rounded-t-lg">
-          <img src="./images/icon-work.svg" alt="icon-work" class="w-11" srcset="">
-        </div>
+        <div class="card-activities-logo bg-light-red-work h-11 bg-[url('../images/icon-work.svg')] bg-no-repeat bg-right"></div>
 
-        <div class="bg-dark-blue p-3 rounded-lg">
+        <div class="card-activities-time">
           
           <div class="flex justify-between items-center text-white">
             <span class="title"></span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
           </div>
 
-          <div id="Work">
-            <h2 class="current_time"></h2>
-            <p class="previous_time"></p>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="card card-activities">
-        <div class="flex justify-end bg-soft-blue-play rounded-t-lg">
-          <img src="./images/icon-play.svg" alt="icon-play" class="w-11" srcset="">
-        </div>
-
-        <div class="bg-dark-blue p-3 rounded-lg">
-
-          <div class="flex justify-between items-center text-white">
-            <span class="title"></span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
-          </div>
-
-          <div id="Play">
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
             <h2 class="current_time"></h2>
             <p class="previous_time"></p>
           </div>
@@ -85,18 +62,40 @@
       </div>
 
       <div class="card card-activities">
-        <div class="flex justify-end bg-light-red-study rounded-t-lg">
-          <img src="./images/icon-study.svg" alt="icon-study" class="w-11" srcset="">
+        <div class="card-activities-logo bg-soft-blue-play h-16 bg-[url('../images/icon-play.svg')] bg-no-repeat bg-right"></div>
+
+        <div class="card-activities-time">
+
+          <div class="flex justify-between items-center text-white">
+            <span class="title"></span>
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
+          </div>
+
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
+            <h2 class="current_time"></h2>
+            <p class="previous_time"></p>
+          </div>
+
         </div>
 
-        <div class="bg-dark-blue p-3 rounded-lg">
+      </div>
+
+      <div class="card card-activities">
+
+        <div class="card-activities-logo bg-light-red-study h-14 bg-[url('../images/icon-study.svg')] bg-no-repeat bg-right"></div>
+
+        <div class="card-activities-time">
           
           <div class="flex justify-between items-center text-white">
             <span class="title"></span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
           </div>
 
-          <div id="Study">
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
             <h2 class="current_time"></h2>
             <p class="previous_time"></p>
           </div>
@@ -107,17 +106,18 @@
 
       <div class="card card-activities">
 
-        <div class="flex justify-end bg-lime-green-exercise rounded-t-lg">
-          <img src="./images/icon-exercise.svg" alt="icon-exercise" class="w-14" srcset="">
-        </div>
+        <div class="card-activities-logo bg-lime-green-exercise h-11 bg-[url('../images/icon-exercise.svg')] bg-no-repeat bg-right"></div>
 
-        <div class="bg-dark-blue p-3 rounded-lg">
+        <div class="card-activities-time">
+
           <div class="flex justify-between items-center text-white">
             <span class="title"></span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
           </div>
 
-          <div id="Exercise">
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
             <h2 class="current_time"></h2>
             <p class="previous_time"></p>
           </div>
@@ -127,18 +127,18 @@
       </div>
 
       <div class="card card-activities">
-        <div class="flex justify-end bg-violet-social rounded-t-lg">
-          <img src="./images/icon-social.svg" alt="icon-social" class="w-11" srcset="">
-        </div>
+        <div class="card-activities-logo bg-violet-social h-16 bg-[url('../images/icon-social.svg')] bg-no-repeat bg-right"></div>
 
-        <div class="bg-dark-blue p-3 rounded-lg">
+        <div class="card-activities-time">
 
           <div class="flex justify-between items-center text-white">
             <span class="title"></span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
           </div>
 
-          <div id="Social">
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
             <h2 class="current_time"></h2>
             <p class="previous_time"></p>
           </div>
@@ -147,18 +147,19 @@
       </div>
 
       <div class="card card-activities">
-        <div class="flex justify-end bg-soft-orange-self-care rounded-t-lg">
-          <img src="./images/icon-self-care.svg" alt="icon-self-care" class="w-11" srcset="">
-        </div>
 
-        <div class="bg-dark-blue p-3 rounded-lg">
+        <div class="card-activities-logo bg-soft-orange-self-care h-11 bg-[url('../images/icon-self-care.svg')] bg-no-repeat bg-right"></div>
+
+        <div class="card-activities-time">
 
           <div class="flex justify-between items-center text-white">
             <span class="title"> Care</span>
-            <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            <a href="#" class="">
+              <img src="./images/icon-ellipsis.svg" alt="icon-ellipsis">
+            </a>
           </div>
 
-          <div id="SelfCare">
+          <div class="h-full flex justify-between items-center lg:flex-col lg:justify-center lg:items-start lg:space-y-4">
             <h2 class="current_time"></h2>
             <p class="previous_time"></p>
           </div>
@@ -169,7 +170,7 @@
 
     </div>
 
-    <div class="text-white absolute bottom-0">
+    <div class="text-white lg:absolute lg:bottom-0 text-center">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Tomas Emanuel Ramirez Abarca</a>.
     </div>

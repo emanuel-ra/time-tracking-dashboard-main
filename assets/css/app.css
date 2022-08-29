@@ -24,7 +24,7 @@
         @apply bg-very-dark-blue font-Rubik
     }
     h1{
-        @apply text-3xl font-light
+        @apply text-lg lg:text-3xl font-light
     }
     .card{
         @apply rounded-lg
@@ -42,9 +42,21 @@
         @apply text-white
     }  
     .current_time{
-        @apply text-4xl text-pale-blue font-thin
+        @apply text-lg lg:text-[3rem] text-pale-blue font-thin
     }  
     .previous_time{
         @apply text-[.7rem] text-pale-blue font-thin
     }  
+    .card-activities-logo{
+        @apply flex justify-end rounded-t-lg 
+    }
+    .card-activities-logo-img{
+        @apply min-h-full
+    }
+    .card-activities{
+        @apply relative h-32
+    }
+    .card-activities-time{
+        @apply bg-dark-blue p-3 rounded-lg absolute w-full lg:h-40 top-10 hover:bg-desaturated-blue cursor-pointer
+    }
 }   
