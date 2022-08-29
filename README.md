@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [netlify](https://your-live-site-url.com)
-- Live Site URL: [github.io](https://your-live-site-url.com)
+- Live Site URL: [netlify](https://sunny-ganache-3938f6.netlify.app/)
+- Live Site URL: [github.io](https://emanuel-ra.github.io/time-tracking-dashboard-main/)
 
 ## My process
 
